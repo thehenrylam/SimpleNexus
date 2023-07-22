@@ -9,5 +9,5 @@ curl -u "$(cat ${AUTH_TOKEN_FILE})" \
   -H 'X-Nexus-UI: true' \
   2>/dev/null
 
-echo $?
+exit $?
 
