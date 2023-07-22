@@ -1,1 +1,4 @@
 *.ignore.*
+*/client_config.sh
+auth.token
+
