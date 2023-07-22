@@ -1,2 +1,2 @@
-# SimplePulp
-A simple Pulp instance powered by Docker
+# SimpleNexus
+A simple Nexus instance powered by Docker
