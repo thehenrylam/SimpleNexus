@@ -4,5 +4,5 @@
 
 echo "Stopping ${KEYWORD} Container"
 
-docker stop ${CONTAINER_NAME}
+docker stop --time=120 ${CONTAINER_NAME}
 

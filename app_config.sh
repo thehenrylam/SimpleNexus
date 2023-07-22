@@ -1,6 +1,6 @@
 #!/bin/bash
 
-KEYWORD="Pulp"
-IMAGE_NAME="pulp_image"
-CONTAINER_NAME="pulp_McAws"
-VOLUME_NAME="pulp_McAws_data"
+KEYWORD="Nexus"
+IMAGE_NAME="nexus_image"
+CONTAINER_NAME="nexus_McAws"
+VOLUME_NAME="nexus_McAws_data"
