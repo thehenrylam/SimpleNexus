@@ -12,7 +12,7 @@ help() {
 api_list() {
 	curl -u "$(cat ${AUTH_TOKEN_FILE})" \
 		-X 'GET' \
-		"http://${NEXUS_IP_ADDRESS}:8081/service/rest/v1/components?repository=${REPO_NAME_RAW}" \
+		"http://${NEXUS_IP_ADDRESS}:8081/service/rest/v1/components?repository=${REPO_NAME_MVN}" \
 		-H 'accept: application/json' \
 		-H 'X-Nexus-UI: true' \
 		2>/dev/null
