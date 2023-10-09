@@ -2,9 +2,7 @@
 
 . ./client_config.sh
 
-REPO_FILE_PATH="$1"
-NEXUS_URL="http://${NEXUS_IP_ADDRESS}:8081"
-FULL_URL_PATH="${NEXUS_URL}/repository/${REPO_NAME_MVN}/${REPO_FILE_PATH}"
+FULL_URL_PATH=$(echo "$1" | grep -s ${NEXUS_URL})
 
 echo "OPERATION SUMMARY"
 echo "REMOVE : ${FULL_URL_PATH}"

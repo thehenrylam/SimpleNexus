@@ -2,10 +2,8 @@
 
 . ./client_config.sh
 
-REPO_FILE_PATH="$1"
+FULL_URL_PATH=$(echo "$1" | grep -s ${NEXUS_URL})
 CURR_FILE_PATH="$2"
-NEXUS_URL="http://${NEXUS_IP_ADDRESS}:8081"
-FULL_URL_PATH="${NEXUS_URL}/repository/${REPO_NAME_RAW}/${REPO_FILE_PATH}"
 
 echo "OPERATION SUMMARY"
 echo "PULL : $(readlink -f ${CURR_FILE_PATH}) <- ${FULL_URL_PATH}"
