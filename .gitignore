@@ -1,5 +1,8 @@
 *.ignore.*
 */client_config.sh
+*/client_config.yml
 *.tar.gz
 auth.token
+
+*.pyc
 

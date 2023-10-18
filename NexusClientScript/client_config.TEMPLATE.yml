@@ -1,0 +1,10 @@
+# The repo names of the Nexus host (denoted by its alias: raw, mvn, etc)
+repo_name:
+  raw: "CHANGE-ME-REPO-NAME-RAW"
+  mvn: "CHANGE-ME-REPO-NAME-MVN"
+
+# The authentication token file (The contents should be one line: <username>:<password>)
+auth_token_file: "CHANGE-ME-AUTH-TOKEN-FILE"
+
+# The IP address of the Nexus host
+nexus_url: "http://CHANGE-ME-REPO-NAME:PORT"
