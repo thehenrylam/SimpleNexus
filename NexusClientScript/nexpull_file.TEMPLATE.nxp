@@ -1,0 +1,11 @@
+# This is the general template that must be followed:
+# Pro-tip: This file supports '#' comments! Use them!
+<repo_alias>,<path_to_nexus_object>
+# Example 01: 
+#   Attempt to get "file.txt" from the RAW repository (using the alias of 'raw', set in client_config.yml)
+#   The URL path in Nexus is http://ip-address:port/repository/get_full_repo_name('raw')/path/to/file.txt
+raw,path/to/file.txt
+# Example 02:
+#   Attempt to get version 2.1 "binary.jar" from the MVN repostiroy (using the alias of 'mvn', set in client_config.yml)
+#   The URL path in Nexus is http://ip-address:port/repository/get_full_repo_name('raw')/path/to/binary/2.1/binary.jar
+mvn,path/to/binary/2.1/binary.jar

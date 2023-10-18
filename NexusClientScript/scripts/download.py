@@ -11,7 +11,7 @@ CLIENT_CONFIG_FILE="./client_config.yml"
 CLIENT_CONFIG=dict()
 TARGET_REPO=None
 
-def main(local_filepath, nexus_filepath):
+def download_from_nexus(local_filepath, nexus_filepath):
     NEXUS_URL = CLIENT_CONFIG["nexus_url"]
     REPO_NAME = CLIENT_CONFIG["repo_name"][ TARGET_REPO ]
     AUTH_TOKEN_FILE = CLIENT_CONFIG["auth_token_file"]
@@ -37,6 +37,14 @@ def main(local_filepath, nexus_filepath):
 
     return
 
+# This method is to help allow other scripts to use the
+# functinoality of download.py without needing to rewrite the functionality from scratch
+def api_download_from_nexus(client_config, target_repo, local_filepath, nexus_filepath):
+    global CLIENT_CONFIG, TARGET_REPO
+    CLIENT_CONFIG = client_config
+    TARGET_REPO = target_repo
+    return download_from_nexus(local_filepath, nexus_filepath)
+
 def help_message():
     print("USAGE: {} <TARGET_REPO> <TARGET_FILEPATH> <NEXUS_FILEPATH>".format(sys.argv[0]))
     return
@@ -52,4 +60,4 @@ if __name__ == "__main__":
 
     CLIENT_CONFIG = standard_utils.initialize_configs_from_file( CLIENT_CONFIG_FILE ) 
 
-    output = main(local_filepath, nexus_filepath)
+    output = download_from_nexus(local_filepath, nexus_filepath)
