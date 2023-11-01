@@ -10,5 +10,5 @@ docker create --name ${CONTAINER_NAME} \
   --restart=on-failure \
   -p 8081:8081 \
   -v ${VOLUME_NAME}:/nexus-data \
-  sonatype/nexus3
+  "${DOCKER_IMAGE}"
 
