@@ -6,3 +6,4 @@ auth.token
 
 *.pyc
 
+app_config.sh
